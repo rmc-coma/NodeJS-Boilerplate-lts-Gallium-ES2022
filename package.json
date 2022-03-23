@@ -14,7 +14,7 @@
         "start": "node ./dist/main.js",
         "build": "rm -rf ./dist/* && ./node_modules/.bin/tsc -p tsconfig.json --emitDeclarationOnly && $SHELL -c '[ -s \"$HOME/.nvm/nvm.sh\" ] && \\. \"$HOME/.nvm/nvm.sh\" && ESBUILD_TARGET=node$(nvm version-remote $(cat .nvmrc) | sed \"s/v//\") ./node_modules/.bin/esbuild --tsconfig=./tsconfig.json --bundle --minify --tree-shaking=true --platform=node --target=$ESBUILD_TARGET --outfile=./dist/main.js .'",
         "try": "rm -rf ./dist/* && $SHELL -c '[ -s \"$HOME/.nvm/nvm.sh\" ] && \\. \"$HOME/.nvm/nvm.sh\" && ESBUILD_TARGET=node$(nvm version-remote $(cat .nvmrc) | sed \"s/v//\") ./node_modules/.bin/esbuild --tsconfig=./tsconfig.json --bundle --tree-shaking=false --platform=node --target=$ESBUILD_TARGET --outfile=./dist/main.js ./src/main.ts && node ./dist/main.js'",
-        "debug": "./node_modules/.bin/nodemon --allow-overwrite --exec \"rm -rf ./dist/* && $SHELL -c '[ -s \"$HOME/.nvm/nvm.sh\" ] && \\. \"$HOME/.nvm/nvm.sh\" && ESBUILD_TARGET=node$(nvm version-remote $(cat .nvmrc) | sed \"s/v//\") ./node_modules/.bin/esbuild --tsconfig=./tsconfig.json --bundle --sourcemap --tree-shaking=false --platform=node --target=$ESBUILD_TARGET --outfile=./dist/main.js ./src/main.ts && node ./dist/main.js'\""
+        "debug": "./node_modules/.bin/nodemon --allow-overwrite --exec \"rm -rf ./dist/* && $SHELL -c '[ -s \"$HOME/.nvm/nvm.sh\" ] && \\. \"$HOME/.nvm/nvm.sh\" && ESBUILD_TARGET=node$(nvm version-remote $(cat .nvmrc) | sed \"s/v//\") ./node_modules/.bin/esbuild --tsconfig=./tsconfig.json --bundle --sourcemap --tree-shaking=false --platform=node --target=$ESBUILD_TARGET --outfile=./dist/main.js ./src/main.ts && node --enable-source-maps ./dist/main.js'\""
     },
     "repository": {
         "type": "git",
