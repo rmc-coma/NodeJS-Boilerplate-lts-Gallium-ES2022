@@ -1,3 +1,5 @@
+.DS_Store
+.husky/_
 node_modules/
 build/
 dist/
