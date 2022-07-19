@@ -18,7 +18,12 @@
     "ignorePatterns": ["node_modules", "dist", "build"],
     "plugins": ["@typescript-eslint", "prettier"],
     "rules": {
-        "prettier/prettier": "warn",
+        "prettier/prettier": [
+            "warn",
+            {
+                "printWidth": 92 // Needs to be synchronized with .editorconfig for some reason
+            }
+        ],
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
         "@typescript-eslint/ban-ts-comment": "off",

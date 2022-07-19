@@ -1,6 +1,5 @@
 {
     "bracketSpacing": true,
-    "printWidth": 92,
     "arrowParens": "avoid",
     "trailingComma": "es5"
 }
