@@ -35,7 +35,17 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "require-await": "warn",
-        "require-yield": "warn"
+        "require-yield": "warn",
+        "sort-imports": [
+            "warn",
+            {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+                "allowSeparatedGroups": false
+            }
+        ]
     },
     "reportUnusedDisableDirectives": true
 }

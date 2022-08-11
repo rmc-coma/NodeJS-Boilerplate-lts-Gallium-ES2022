@@ -2,17 +2,6 @@
     /*
     ! VsCode
     */
-    "editor.autoIndent": "full",
-    "editor.wrappingIndent": "indent",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true
-    },
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -23,41 +12,88 @@
         "**/node_modules": false
     },
     /*
-    ! Langugages
-    */
-    "json.schemas": [],
+     * Formatting
+     */
+    // Editor
+    // "editor.tabSize": 2,           \ Settings disabled by the following one
+    // "editor.insertSpaces": true,   /
+    "editor.detectIndentation": true,
+    "editor.useTabStops": true,
+    "editor.stickyTabStops": true,
+    "editor.autoIndent": "full",
+    "editor.wrappingIndent": "indent",
+    "editor.autoClosingDelete": "auto",
+    "editor.trimAutoWhitespace": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+        "source.fixAll": true
+    },
+    // ESLint
+    "eslint.format.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    "eslint.workingDirectories": [{ "mode": "auto" }],
+    // JSON
     "json.format.enable": true,
+    // Javascript
+    "javascript.format.enable": false,
+    // TypeScript
+    "typescript.format.enable": false,
+    // Per languages settings
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false,
+            "source.fixAll": true
+        }
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": false,
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false,
+            "source.fixAll": true
+        }
+    },
+    "[d]": {
+        "editor.defaultFormatter": "webfreak.code-d",
+        "editor.detectIndentation": false,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[html]": {
+        "gitlens.codeLens.scopes": ["document"]
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.detectIndentation": false,
         "editor.tabSize": 4,
         "editor.insertSpaces": true
     },
+    /*
+    ! Langugages
+    */
+    "json.schemas": [],
     "vsintellicode.typescript.completionsEnabled": true,
     "js/ts.implicitProjectConfig.checkJs": false,
     "js/ts.implicitProjectConfig.experimentalDecorators": false,
     "js/ts.implicitProjectConfig.strictFunctionTypes": true,
     "js/ts.implicitProjectConfig.strictNullChecks": true,
-    "javascript.format.enable": true,
     "javascript.validate.enable": true,
     "javascript.preferences.quoteStyle": "double",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "javascript.format.insertSpaceAfterCommaDelimiter": true,
-    "javascript.format.insertSpaceAfterConstructor": true,
-    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
-    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
-    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
-    "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
-    "javascript.format.semicolons": "insert",
     "javascript.commonjs.resolve.extensions": [".js", ".jsx", ".ts", ".tsx"],
     "javascript.commonjs.resolve.package": "package.json",
     "javascript.commonjs.resolve.languages": [
@@ -68,28 +104,10 @@
     ],
     "javascript.commonjs.resolve.moduleDirectory": ["node_modules", "**/node_modules"],
     "typescript.validate.enable": true,
-    "typescript.format.enable": true,
     "typescript.preferences.quoteStyle": "double",
     "typescript.disableAutomaticTypeAcquisition": true,
     "typescript.check.npmIsInstalled": true,
     "typescript.autoClosingTags": true,
-    "typescript.format.insertSpaceAfterCommaDelimiter": true,
-    "typescript.format.insertSpaceAfterConstructor": true,
-    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "typescript.format.insertSpaceAfterSemicolonInForStatements": true,
-    "typescript.format.insertSpaceAfterTypeAssertion": true,
-    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
-    "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
-    "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
-    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
-    "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
-    "typescript.format.semicolons": "insert",
     "typescript.updateImportsOnFileMove.enabled": "always",
     /*
     ! Extensions
@@ -99,11 +117,9 @@
     "docthis.inferTypesFromNames": true,
     "docthis.inlineOneLiners": true,
     "docthis.includeTypes": true,
-    "eslint.format.enable": true,
     "eslint.lintTask.enable": false,
     "eslint.alwaysShowStatus": false,
     "eslint.run": "onType",
-    "eslint.codeActionsOnSave.mode": "all",
     "eslint.onIgnoredFiles": "off",
     "eslint.migration.2_x": "on",
     "eslint.validate": [

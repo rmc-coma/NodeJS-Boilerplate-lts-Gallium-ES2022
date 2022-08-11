@@ -47,4 +47,5 @@ module.exports = {
         "!**/__mocks__/**",
     ],
     coverageDirectory: "<rootDir>/coverage",
+    verbose: true,
 };
